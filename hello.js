@@ -17,18 +17,21 @@ async function dictionaryData(main) {
 
   // to map the first two entries
   let toBeMapped = res.data.results[0].lexicalEntries;
+  let thisData = res.data;
+  console.log(JSON.stringify(thisData));
 
   let wordAndTypeEntry = toBeMapped.map((entry, index) => {
-    return `\n ${entry.text} (${entry.lexicalCategory}) 
-     ${secondFinal} \n`;
+    return `\n ${entry.text} (${entry.lexicalCategory})
+      \n`;
   });
 
-  let reduced = toBeMapped;
+  console.log(wordAndTypeEntry);
+  // let reduced = toBeMapped;
 
-  //this is to put into
-  let definition = reduced.map(things => {
-    return things.entries[0];
-  });
+  // //this is to put into
+  // let definition = reduced.map(things => {
+  //   return things.entries[0];
+  // });
 
   // let reducing = definition.reduce((a, b) => {
   //   return a.concat(b);
@@ -47,15 +50,13 @@ async function dictionaryData(main) {
   //   return secondEndKey.short_definitions;
   // });
 
-  // console.log(secondFinal);
-
   // let thirdFinal = secondFinal.reduce((a, b) => {
   //   return a.concat(b);
   // }, []);
 
   // console.log("this is define", thirdFinal);
 
-  console.log(wordAndTypeEntry.join(""));
+  // console.log(wordAndTypeEntry.join(""));
 }
 
 dictionaryData("hello");
