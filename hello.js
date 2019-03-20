@@ -17,8 +17,10 @@ async function dictionaryData(main) {
 
   // to map the first two entries
   let toBeMapped = res.data.results[0].lexicalEntries;
-  let thisData = res.data;
-  console.log(JSON.stringify(thisData));
+
+  //using this to get a copy of the data for view
+  //let thisData = res.data;
+  //  console.log(JSON.stringify(thisData));
 
   let wordAndTypeEntry = toBeMapped.map((entry, index) => {
     return `\n ${entry.text} (${entry.lexicalCategory})
