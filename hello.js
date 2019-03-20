@@ -1,7 +1,9 @@
 const hello = () => {
-  console.log("Hello")
-}
+  console.log("Hello");
+};
 
 module.exports = {
   hello
-}
+};
+
+// hi there
